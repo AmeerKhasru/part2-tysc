@@ -1,11 +1,17 @@
 // v1-module-config theke import (conflict rokar jonno alias use kora holo)
-import { greetings as v1Greetings } from './v1-module-config';
+import * as v2uninon from './v2-union.js';
+import { greetings} from './v1-module-config.js';
 
-// v2-module theke import
-import { v2Greetings } from './v2-union';
 
 console.log("--- Main script.ts started ---");
 
-// Ekhon duti function-i call korte parbe
-v1Greetings();
-v2Greetings();
+
+greetings();
+
+
+
+console.log("Status 1:", v2uninon.status1);
+console.log("Status 2:", v2uninon.status2);
+console.log("Status 3:", v2uninon.status3);
+console.log("Value 1:", v2uninon.value1);
+console.log("Value 2:", v2uninon.value2); 
