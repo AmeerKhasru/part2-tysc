@@ -1,0 +1,8 @@
+# Build folder ignore korar jonno
+dist/
+
+# Node modules ignore korar jonno
+node_modules/
+
+# Environment files
+.env
