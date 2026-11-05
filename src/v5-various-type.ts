@@ -52,4 +52,7 @@ let str1: string = anything; // Valid (কোনো এরর দেবে ন�
 let unk: unknown = "Bangladesh";
 unk = 100; // Valid
 
+console.log("Anything:", anything);
+console.log("Unknown:", unk);
+
 // let myStr: string = unk; // Error! Type 'unknown' is not assignable to type 'string'.
