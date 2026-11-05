@@ -23,3 +23,15 @@ const isAdmin = (account: { name: string; isAdmin?: boolean }) => {
 };
 isAdmin({ name: "Alice", isAdmin: true });
 isAdmin({ name: "Bob" });
+
+//instanceof operator
+console.log("Instanceof operator example:");
+const logValue = (value: string | Date) => {
+    if (value instanceof Date) {
+        console.log("Date value:", value.toISOString());
+    } else {
+        console.log("String value:", value.toUpperCase());
+    }
+};
+logValue("Hello, TypeScript!");
+logValue(new Date());
