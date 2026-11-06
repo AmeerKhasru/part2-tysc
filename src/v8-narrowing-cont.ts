@@ -35,3 +35,31 @@ const logValue = (value: string | Date) => {
 };
 logValue("Hello, TypeScript!");
 logValue(new Date());
+
+//Descriminated Unions
+console.log("Discriminated Unions example:");
+
+interface User {
+    type: "user";
+    name: string;
+    email: string;
+}
+
+interface Admin {
+    type: "admin";
+    name: string;
+    permissions: string[];
+}
+
+type Person = User | Admin;
+
+const printPerson = (person: Person) => {
+    if (person.type === "admin") {
+        console.log(`${person.name} is an admin with permissions: ${person.permissions.join(", ")}`);
+    } else {
+        console.log(`${person.name} is a user with email: ${person.email}`);
+    }
+};
+
+printPerson({ type: "user", name: "Alice", email: "alice@example.com" });
+printPerson({ type: "admin", name: "Bob", permissions: ["read", "write"] });    
