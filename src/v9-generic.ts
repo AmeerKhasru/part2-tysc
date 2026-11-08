@@ -5,3 +5,5 @@ function identity<T>(arg: T): T {
 
 let output = identity("Hello from v9-generic.ts!");
 console.log(output);
+
+
